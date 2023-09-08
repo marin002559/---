@@ -1,6 +1,6 @@
 fundamental-mode
 
-(today (format-time-string "%Y-%m-%d"))
+(today (format-time-string "%d-%m-%Y"))
 
 bibtex-mode
 
@@ -17,3 +17,14 @@ bibtex-mode
       "  year = \"" p "\"," n
       "  publisher = \"" p "\"," n
       "}")
+
+org-mode
+
+(fig "#+CAPTION: " p n
+     "[[./assets/" p "]]" n)
+
+(sfig "#+CAPTION: " p n
+      "#+ATTR_LATEX: :height 0.1\\textwidth" n
+      "[[./assets/" p "]]" n)
+
+(np "#+LATEX:\\newpage" n)
